@@ -108,7 +108,7 @@ Looking up the IP of a container and running an SSH command quickly becomes tedi
 First, install the tool on the Docker host:
 
     curl --fail -L https://raw.githubusercontent.com/MichaelHoltTech/baseimage/master/tools/install-tools.sh -o /tmp/install-tools.sh  && \
-    sudo sh ./tmp/install-tools.sh
+    sudo sh /tmp/install-tools.sh
 
 Then run the tool as follows to login to a container using SSH:
 
