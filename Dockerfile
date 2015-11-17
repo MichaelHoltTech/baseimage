@@ -16,9 +16,6 @@ RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 #make all init.d scripts executable
 RUN chmod +x /etc/my_init.d/*.sh
 
-# Install SSH daemon configuration
-ADD conf/sshd/sshd_config /etc/ssh/sshd_config
-
 #Ensure OS is up-to-date
 RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
 
