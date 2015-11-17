@@ -52,7 +52,7 @@ You can configure the stock `ubuntu` image yourself from your Dockerfile, so why
 The first option we provide is to specify SSH keys in an environment variable when starting
 your Docker instance:
 
-    sudo docker run -d -e SSH_KEYS="$(cat ~/.authorized_keys)" rfkrocktk/baseimage
+    sudo docker run -d -e SSH_KEYS="$(cat ~/.authorized_keys)" michaelholttech/baseimage
 
 On startup of the container, it will add each SSH key found in the `SSH_KEYS`
 environment variable to the `$HOME/.ssh/authorized_keys` file inside of the container. You'll
@@ -75,7 +75,7 @@ is that you can easily maintain the `authorized_keys` file _outside_ of the Dock
 a Docker volume:
 
     sudo docker run -d --name "dockerduck" -v /host/path/to/dockerduck-ssh-keys:/root/.ssh/authorized_keys.d \
-        rfkrocktk/baseimage
+        michaelholttech/baseimage
 
 Now, simply open `/host/path/to/dockerduck-ssh-keys/authorized_keys` and add your SSH public keys there:
 
