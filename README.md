@@ -22,6 +22,8 @@ running Docker instances.
 <a name="phusion"></a>
 ### With a Little Help from Phusion
 
+
+
 Based on Phusion's excellent [baseimage-docker](https://github.com/phusion/baseimage-docker),
 this Docker base-image features all of the awesome features you've grown to love like
 working CRON jobs, a SSH server, a lightweight working init system (that actually works!),
@@ -102,7 +104,7 @@ your first hop.
 
 <a name="docker_ssh"></a>
 #### The `docker-ssh` tool
-
+**_This tool is still under development_**
 Looking up the IP of a container and running an SSH command quickly becomes tedious. Luckily, we provide the `docker-ssh` tool which automates this process. This tool is to be run on the *Docker host*, not inside a Docker container.
 
 First, install the tool on the Docker host:
