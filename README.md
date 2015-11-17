@@ -14,6 +14,7 @@ Baseimage is a special [Docker](https://www.docker.com) image that is configured
    * [Using a Data Volume](#ssh_data_volume)
  * [Connecting to Your Docker Instance](#login_ssh)
    * [Using Docker-ssh](#docker_ssh)
+ * [Credits](#credts)
 
 -----------------------------------------
 Yet another [Docker](http://docker.io) base image to make it easier to connect to your
@@ -103,7 +104,7 @@ hosted on a remote server, as your agent only runs on your local machine and is 
 your first hop.
 
 <a name="docker_ssh"></a>
-#### The `docker-ssh` tool
+### The `docker-ssh` tool
 **_This tool is still under development and does not currently work_**
 
 Looking up the IP of a container and running an SSH command quickly becomes tedious. Luckily, we provide the `docker-ssh` tool which automates this process. This tool is to be run on the *Docker host*, not inside a Docker container.
@@ -122,3 +123,8 @@ You can lookup `YOUR-CONTAINER-ID` by running `docker ps`.
 By default, `docker-ssh` will open a Bash session. You can also tell it to run a command, and then exit:
 
     docker-ssh YOUR-CONTAINER-ID echo hello world
+
+<a name="credits"></a>
+## Credits
+ * [rfkrocktk/docker-baseimage](https://github.com/MichaelHoltTech/baseimage/blob/master/scripts/01_configure_authorized_keys.sh) is where the original code that the SSH Key ENV Variable system is based off of - [rfkrocktk](https://github.com/rfkrocktk)
+ * [phusion/baseimage-docker](https://github.com/phusion/baseimage-docker) is the core image that this is based on
