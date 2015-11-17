@@ -4,6 +4,6 @@ dir=`dirname "$0"`
 cd "$dir"
 
 set -x
-curl --fail -L -o https://github.com/MichaelHoltTech/baseimage/tools/docker-bash /usr/local/bin/docker-bash
-curl --fail -L -o https://github.com/MichaelHoltTech/baseimage/tools/docker-ssh /usr/local/bin/docker-ssh
-curl --fail -L -o https://github.com/MichaelHoltTech/baseimage/tools/baseimage-docker-nsenter /usr/local/bin/baseimage-docker-nsenter
+curl --fail -L https://raw.githubusercontent.com/MichaelHoltTech/baseimage/master/tools/docker-bash -o /usr/local/bin/docker-bash
+curl --fail -L https://raw.githubusercontent.com/MichaelHoltTech/baseimage/master/tools/docker-ssh -o /usr/local/bin/docker-ssh
+curl --fail -L https://raw.githubusercontent.com/MichaelHoltTech/baseimage/master/tools/baseimage-docker-nsenter -o /usr/local/bin/baseimage-docker-nsenter
