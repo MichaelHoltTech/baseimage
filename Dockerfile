@@ -4,7 +4,8 @@
 # a list of version numbers.
 FROM phusion/baseimage:0.9.17
 MAINTAINER Michael Holt <mike@holtit.com>
-
+#Set TERM so that nano can work
+ENV TERM=xterm
 #Enable SSH
 RUN rm -f /etc/service/sshd/down
 
@@ -19,7 +20,7 @@ ADD scripts/02_add_ssh_env_keys.sh /etc/my_init.d/02_add_ssh_env_keys.sh
 RUN chmod +x /etc/my_init.d/*.sh
 
 #Ensure OS is up-to-date
-RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold"
+RUN apt-get update && apt-get upgrade -y -o Dpkg::Options::="--force-confold" && apt-get install nano -y
 
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
