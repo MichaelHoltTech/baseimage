@@ -105,6 +105,7 @@ your first hop.
 <a name="docker_ssh"></a>
 #### The `docker-ssh` tool
 **_This tool is still under development_**
+
 Looking up the IP of a container and running an SSH command quickly becomes tedious. Luckily, we provide the `docker-ssh` tool which automates this process. This tool is to be run on the *Docker host*, not inside a Docker container.
 
 First, install the tool on the Docker host:
