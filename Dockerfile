@@ -14,6 +14,8 @@ RUN rm -f /etc/service/sshd/down
 RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 
 #make all init.d scripts executable
+ADD scripts/01_configure_authorized_keys.sh /etc/my_init.d/01_configure_authorized_keys.sh
+ADD scripts/02_add_ssh_env_keys.sh /etc/my_init.d/02_add_ssh_env_keys.sh
 RUN chmod +x /etc/my_init.d/*.sh
 
 #Ensure OS is up-to-date
