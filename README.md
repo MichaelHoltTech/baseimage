@@ -1,3 +1,4 @@
+[![](https://badge.imagelayers.io/michaelholttech/baseimage:latest.svg)](https://imagelayers.io/?images=michaelholttech/baseimage:latest 'Get your own badge on imagelayers.io')
 # A minimal Ubuntu base image modified for Docker-friendliness
 
 Baseimage is a special [Docker](https://www.docker.com) image that is configured for correct use within Docker containers based on Baseimage-docker from [Phusion](https://registry.hub.docker.com/u/phusion/baseimage/).
